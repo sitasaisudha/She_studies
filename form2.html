@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>She studies</title>
+    <!-- boot starp cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="frm2.css">
+    <style>
+        body{
+            background-color: rgb(237, 203, 218);
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+   
+       
+    <form action="" class="form">
+        <div id="m1">
+        
+            <h4>Select Donation type </h4>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group" >
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-lg btn-outline-danger" for="btnradio1">One time </label>
+                
+              
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-danger btn-lg" for="btnradio2">Monthly</label>
+            </div>
+            <br>
+    
+            <h4>Select donation amount</h4>
+            <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                <label class="btn btn-outline-danger btn-lg" for="vbtn-radio1" onclick="changed()">₹1100 </label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                <label class="btn btn-outline-danger btn-lg" for="vbtn-radio2" onclick="changed()">₹2200 </label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                <label class="btn btn-outline-danger btn-lg" for="vbtn-radio3" onclick="changed()">₹3300</label>
+                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio4" autocomplete="off">
+                <label class="btn btn-outline-danger btn-lg" for="vbtn-radio4" onclick="changes()">other</label>
+              
+              </div>
+              <br>
+    
+            
+        
+            <div id="para">
+                <h4> Your donation will help the education of a girl child</h4>
+            </div>
+            <input type="checkbox" name="" id="chk">
+            <label for="chk">I wish to bear the 3% payment Gateway charges.</label>
+            <p>Registered under Section 8 of the Indian Companies Act, 2013 and under Section 12A of the Income Tax Act, 1961. Donations to Educate Girls are tax exempted under 80G of the Indian Income Tax Act.</p>
+    
+          
+           <input type="button" value="Donate Now" class="btn btn-danger btn-lg" onclick="pay()">
+            
+        </div>
+              
+              
+        </form>
+        
+        
+        
+        <form action="">
+            <div id="p2" >
+
+            </div>
+        </form>
+    
+    </center>
+
+    <script>
+        let sr1 = document.getElementById('m1')
+        let p1 = document.getElementById('para');
+        let pr2 = document.getElementById('p2');
+        function changed(){
+            p1.innerHTML = ` <div id="para">
+            <h4> Your donation will help the education of a girl child</h4>
+        </div> `
+        }
+        function changes(){
+            p1.innerHTML = `
+        <label for="bt" id='nm'>Enter amount </label>
+        <input type="number" name="" id="num" style="width: 3rem; " value="1" min="1">
+ `
+                
+            
+        }
+
+        function pay(){
+           sr1.innerText = '';
+            pr2.innerHTML = ` 
+            <div class="pays">
+                <ul>
+                    <li>Google pay</li>
+                    <li>Phone pay</li>
+                    <li>Paytm</li>
+                    <li>Other internet banking </li>
+                </ul>
+                <img src="qr.png" alt="">
+            </div>
+         
+            <table>
+        <tr>
+            <td width = "50%"><hr></td>
+            <td>or</td>
+            <td width = "50%"><hr></td>
+        </tr>
+    </table>
+    <br>
+
+    
+         
+         <div class="row" style='margin-left:100px'>
+    
+            <div class="col-md-5">
+                Name on card
+                <input type="text" name="" id="" class="form-control">
+                <caption > <span class="fw-lighter">full name as displayed on card</span> </caption>
+        
+            </div>
+            <div class="col-md-5">
+                Credit card number
+                <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <br>
+          <div class="row" style='margin-left:100px'>
+            <div class="col-md-3">
+                Expiration
+                <input type="text" name="" id="" class="form-control">
+                
+        
+            </div>
+            <div class="col-md-3">
+                CVV
+                <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <a href="thankyou.html"><input type="button" value="Pay" class="btn btn-lg btn-success" ></a>
+           
+    
+        `
+        }
+    </script>
+    
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>

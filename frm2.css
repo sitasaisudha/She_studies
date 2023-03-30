@@ -1,0 +1,43 @@
+#btnradio2{
+    margin: 5rem;
+   }
+   .pays{
+    display: flex;
+    justify-content: space-around;
+   }
+   .pays img{
+    height: 200px;
+    width: 200px;
+   }
+   .pays li{
+    font-size: 30px;
+    color: red;
+   }
+   #num{
+    width: 50px;
+   }
+   #nm{
+    font-size: 20px;
+   }
+   .p2 .row{
+    margin-left: 100px;
+   }
+   #m1{
+    margin-top: 50px;
+    border: 1px solid black;
+    width: 1000px;
+   }
+   #p2{
+    border: 1px solid black;
+    width: 1000px;
+   }
+   @media screen  and (max-width:700px) {
+    
+       .pays li{
+        font-size: 20px;
+       }
+       .pays img{
+        height: 100px;
+        width: 100px;
+       }
+   }
